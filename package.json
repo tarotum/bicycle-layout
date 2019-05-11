@@ -1,0 +1,58 @@
+{
+  "name": "bicycle-layout",
+  "version": "1.0.0",
+  "description": "Project for learning css-grid",
+  "main": "src/index.js",
+  "author": "tarotum <onyskiv.maxim@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --mode development",
+    "serve": "http-server ./dist -o"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "prettier"
+    ],
+    "env": {
+      "browser": true
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.2",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.3",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

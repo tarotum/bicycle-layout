@@ -69,7 +69,8 @@ const config = {
   ],
   resolve: {
     alias: {
-      A: path.resolve(__dirname, "src/assets")
+      A: path.resolve(__dirname, "src/assets"),
+      IMG: path.resolve(__dirname, "src/assets/images")
     }
   }
 };

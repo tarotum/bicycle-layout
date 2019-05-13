@@ -27,7 +27,14 @@ const config = {
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,
           { loader: "css-loader", options: { sourceMap: true } },
           { loader: "postcss-loader", options: { sourceMap: true } },
-          { loader: "sass-loader", options: { sourceMap: true } }
+          { loader: "sass-loader", options: { sourceMap: true } },
+          {
+            loader: "sass-resources-loader",
+            options: {
+              sourceMap: true,
+              resources: [path.resolve(__dirname, "src/vars.scss")]
+            }
+          }
         ]
       },
       {

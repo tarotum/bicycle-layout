@@ -70,6 +70,7 @@ const config = {
   resolve: {
     alias: {
       A: path.resolve(__dirname, "src/assets"),
+      C: path.resolve(__dirname, "src/components"),
       IMG: path.resolve(__dirname, "src/assets/images")
     }
   }

@@ -1,0 +1,45 @@
+.slider {
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    &.active {
+      position: relative;
+      z-index: 100;
+      opacity: 1;
+    }
+  }
+  &__dots {
+    text-align: center;
+  }
+  &__dot {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    margin-right: 0.52em;
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 5px;
+    border: 0.07em solid #a9afb3;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.active {
+      background-color: #a9afb3;
+    }
+  }
+}

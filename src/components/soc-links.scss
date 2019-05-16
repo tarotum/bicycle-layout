@@ -1,0 +1,13 @@
+.soc-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  &__item {
+    margin-right: 0.77em;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

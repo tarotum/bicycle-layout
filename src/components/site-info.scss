@@ -1,0 +1,23 @@
+.site-info {
+  color: $text-color;
+  margin-bottom: 2em;
+  text-align: center;
+  &_title {
+    font-size: 1em;
+  }
+  p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.85em;
+  }
+  a {
+    color: $text-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-info {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}

@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  &.horizontal-centered {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.header {
+  position: relative;
+}
+.footer {
+  background-color: $grey;
+  padding: 3em 0 2.5em;
+
+  .container > * {
+    width: 100%;
+  }
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+    &.horizontal-centered {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    background-color: $grey;
+    padding: 5.7em 0 6.3em;
+
+    .container > * {
+      width: calc(100% / 3);
+    }
+  }
+}

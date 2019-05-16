@@ -1,0 +1,49 @@
+.about {
+  background-color: $grey;
+  padding-bottom: 8em;
+  &__title {
+    color: $title-color;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+    padding-top: 10.5em;
+    margin-bottom: 1em;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 52px;
+      height: 44px;
+      background-repeat: no-repeat;
+      background-image: url("~IMG/Icon.png");
+      background-size: 52px 43px;
+      background-position: center;
+      transform: translateX(-50%);
+      top: 6em;
+    }
+  }
+  &__description {
+    color: $text-color;
+    text-align: center;
+    font-size: 1.15em;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5),
+  all and (-o-min-device-pixel-ratio: 3/2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+  .about {
+    &__title {
+      &::before {
+        background-image: url("~IMG/Icon@2x.png");
+      }
+    }
+  }
+}

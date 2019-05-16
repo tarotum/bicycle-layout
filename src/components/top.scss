@@ -1,0 +1,17 @@
+.top {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("~IMG/hero-img.jpg");
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5),
+  all and (-o-min-device-pixel-ratio: 3/2),
+  all and (min--moz-device-pixel-ratio: 1.5),
+  all and (min-device-pixel-ratio: 1.5) {
+  .top {
+    background-image: url("~IMG/hero-img@2x.jpg");
+  }
+}

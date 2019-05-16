@@ -1,0 +1,189 @@
+.shop {
+  &__products {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  &__icon {
+    width: 70px;
+    height: 30px;
+  }
+  &__product {
+    &:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    &:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    &:nth-child(3) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    &:nth-child(4) {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+    &:nth-child(5) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 5;
+    }
+    &:nth-child(6) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    &:nth-child(7) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+    &:nth-child(8) {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+    a {
+      display: block;
+      position: relative;
+      font-size: 0;
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($accent, 0.8);
+        opacity: 0;
+
+        transition: opacity 0.25s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      &:hover {
+        .overlay {
+          opacity: 1;
+        }
+      }
+      .shop-now {
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__action {
+    background-color: $dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.77em 0;
+  }
+  &__link {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    line-height: 2.5;
+    padding: 0 1em;
+    display: inline-block;
+    border: 1px solid #fff;
+    background-color: transparent;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    &:hover {
+      background-color: #fff;
+      color: $dark;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shop {
+    &__products {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: auto;
+    }
+    &__product {
+      &:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      &:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      &:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      &:nth-child(4) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      &:nth-child(5) {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      &:nth-child(6) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      &:nth-child(7) {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      &:nth-child(8) {
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+    }
+    &__icon {
+      height: 50px;
+    }
+  }
+}

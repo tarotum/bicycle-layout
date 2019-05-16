@@ -4,6 +4,8 @@ This project i made based on free psd template as an example of my knowledge in 
 
 Project build with webpack.
 
+## Demo: http://tarotum.github.io/bicycle
+
 ## Commands:
 
 1. `npm install` or `yarn` - install node modules

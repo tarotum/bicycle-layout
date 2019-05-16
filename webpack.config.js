@@ -71,7 +71,10 @@ const config = {
 
     new HtmlWebpackPlugin({
       filename: path.resolve(__dirname, "dist/index.html"),
-      template: path.resolve(__dirname, "src/index.html")
+      template: path.resolve(__dirname, "src/index.html"),
+      minify: {
+        removeScriptTypeAttributes: true
+      }
     })
   ],
   resolve: {
